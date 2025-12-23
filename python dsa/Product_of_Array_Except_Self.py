@@ -3,6 +3,7 @@ a=[1,2,3,4]
 l=[]
 # prod=1
 
+# productExceptSelf_m2()-->to beat time complexity......
 def productExceptSelf_m2(a):
     # left prod...
     l=[0 for i in range(len(a))]
