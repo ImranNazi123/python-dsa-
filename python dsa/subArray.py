@@ -4,6 +4,26 @@ a=[1,2,3,4]
 # print(a[0:2])
 
 
+def SumofSubArr_m2(a):
+    #  reduce time complexity......
+     i=0
+    # col
+     while i<len(a):
+        sum=0
+        j=i
+        for j in range(i,len(a)):
+            # sum=1
+            # sum=3
+            # sum=6.....
+
+            sum+=a[j]
+            print((i,j),sum)
+        i+=1
+    
+
+
+
+
 # fun.. to print sum...
 def sumofSubarr(a):
     i=0
@@ -64,8 +84,9 @@ def subArr():
             j+=1
         i+=1
 
+SumofSubArr_m2(a)
 
-sumofSubarr(a)
+# sumofSubarr(a)
 
 # SubArr_m1(a)
 
