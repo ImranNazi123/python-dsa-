@@ -1,0 +1,13 @@
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        # digits[len(digits)-1]=digits[len(digits)-1]+1
+        # eg.[1,2,3]==[123+1]=[124]
+        digits=[int("".join(map(str,digits)))+1]
+        # [1,2,4]
+        digits=[int(r) for num in digits for r in str(num)]
+
+        return digits
+
+
+# Solution.plusOne()
+# print(d)
