@@ -4,8 +4,9 @@ d=[9,9]
 
 
 # d[len(d)-1]=d[len(d)-1]+1
+# [9,9]==[99+1]==[100]
 d=[int("".join(map(str,d)))+1]
-
+# [100]==[1,0,0]
 d=[int(r) for num in d for r in str(num)]
 print(d)
 # print(type(d[0]))
