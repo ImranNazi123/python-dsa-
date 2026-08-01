@@ -1,0 +1,30 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        i=0
+        j=len(s)-1
+
+        while i<j:
+            # skip notation like , :....
+            if not s[i].isalnum():
+                i+=1
+            # skip notation like , :....
+            elif not s[j].isalnum():
+                j-=1
+
+            # string , to be in lower case all...
+            else:
+                if s[i].lower()==s[j].lower():
+                    i+=1
+                    j-=1
+                else:
+                    return False
+        return True
+
+            
+#leetcode problem....
+            
+            
+
+        
+
+        
