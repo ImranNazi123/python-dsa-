@@ -1,0 +1,30 @@
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n=len(nums)
+        # fix test case ....
+        k=k%n
+        def rotation(i,j):
+            # loop
+            while i<j:
+                # swap
+                t=nums[i]
+                nums[i]=nums[j]
+                nums[j]=t
+                # upd..
+                i+=1
+                j-=1
+
+
+
+
+        # fun...
+        rotation(0,n-1)
+        rotation(0,k-1)
+        rotation(k,n-1)
+
+    # print(a)
+
+#tc:0(n)->leetcode
