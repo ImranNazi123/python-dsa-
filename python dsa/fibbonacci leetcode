@@ -1,0 +1,9 @@
+class Solution:
+    def fib(self, n: int) -> int:
+        if n==1 or n==0:
+            return n
+     # sub problem..
+        a=self.fib(n-1)
+        b=self.fib(n-2)
+        return a+b
+            
