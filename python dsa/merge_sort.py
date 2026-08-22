@@ -1,3 +1,5 @@
+# time:0(nlogn)
+# space:0(n)
 # a=list(map(int,input().split()))
 # a=[60,50,40,30,20,10]
 a=[5,2,3,1]
