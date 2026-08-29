@@ -1,0 +1,56 @@
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        self.merge(nums,0,len(nums)-1)
+        return nums
+
+
+    def f(self,nums,l,h,mid):
+            # merge 
+        i=l
+        j=mid+1
+        temp=[]
+            # loop
+            # i to mid and mid+1 to h..
+        while i<=mid and j<=h:
+            if nums[i]<=nums[j]:
+                    # swap
+                temp.append(nums[i])
+                i+=1
+            else:
+                temp.append(nums[j])
+                j+=1
+
+            # to print remaining ...
+        while i<=mid:
+            temp.append(nums[i])
+            i+=1
+
+        while j<=h:
+            temp.append(nums[j])
+            j+=1
+
+            # place back in array a from temp..
+        nums[l:h+1]=temp
+
+
+    def merge(self,nums,l,h):
+            # bc
+        if l==h:
+            return
+
+            # mid
+        mid=(l+h)//2
+
+            # sub problem left sort..
+            # low se mid tak....
+        self.merge(nums,l,mid)
+
+            # sub problem right sort
+            # mid+1 se high tak
+        self.merge(nums,mid+1,h)
+
+            # merge and sort,,..
+        self.f(nums,l,h,mid)
+
+
+        
